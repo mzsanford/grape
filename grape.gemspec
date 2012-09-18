@@ -2,12 +2,12 @@ $:.push File.expand_path("../lib", __FILE__)
 require "grape/version"
 
 Gem::Specification.new do |s|
-  s.name        = "grape"
-  s.version     = Grape::VERSION
+  s.name        = "mzsanford-grape"
+  s.version     = "3.0.0.rc.1"
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Michael Bleigh"]
-  s.email       = ["michael@intridea.com"]
-  s.homepage    = "https://github.com/intridea/grape"
+  s.authors     = ["Matt Sanford"]
+  s.email       = ["matt@mzsanford.com"]
+  s.homepage    = "https://github.com/mzsanford/grape"
   s.summary     = %q{A simple Ruby framework for building REST-like APIs.}
   s.description = %q{A Ruby framework for rapid API development with great conventions.}
   s.license     = "MIT"
