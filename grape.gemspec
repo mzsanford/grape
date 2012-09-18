@@ -3,7 +3,7 @@ require "grape/version"
 
 Gem::Specification.new do |s|
   s.name        = "mzsanford-grape"
-  s.version     = "3.0.0.pre.1"
+  s.version     = "3.0.0.pre.2"
   s.authors     = ["Matt Sanford"]
   s.email       = ["matt@mzsanford.com"]
   s.homepage    = "https://github.com/mzsanford/grape"
