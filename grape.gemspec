@@ -4,7 +4,6 @@ require "grape/version"
 Gem::Specification.new do |s|
   s.name        = "mzsanford-grape"
   s.version     = "3.0.0.pre.1"
-  s.platform    = Gem::Platform::RUBY
   s.authors     = ["Matt Sanford"]
   s.email       = ["matt@mzsanford.com"]
   s.homepage    = "https://github.com/mzsanford/grape"
