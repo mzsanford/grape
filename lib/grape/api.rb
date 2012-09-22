@@ -291,7 +291,7 @@ module Grape
           :route_options => (@namespace_description || {}).deep_merge(@last_description || {}).deep_merge(route_options || {})
         }
         endpoints << Grape::Endpoint.new(settings.clone, endpoint_options, &block)
-        
+
         @last_description = nil
         reset_validations!
       end

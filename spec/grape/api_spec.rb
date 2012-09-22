@@ -267,11 +267,13 @@ describe Grape::API do
     end
 
     it 'should allow for multipart paths where a param contains a period' do
-      subject.route(:get, '/:id') do
+      subject.route(:get, '/:id', :requirements => { :id => /[a-z\.]*?/,
+                                                     :format => /json|xml/ }) do
         "base/#{params[:id]}"
       end
 
-      subject.route(:get, '/:id/first') do
+      subject.route(:get, '/:id/first', :requirements => { :id => /[a-z\.]*?/,
+                                                           :format => /json|xml/ }) do
         "first/#{params[:id]}"
       end
 
@@ -279,9 +281,13 @@ describe Grape::API do
       last_response.body.should eql 'base/foo.bar'
       get '/foo.bar.json'
       last_response.body.should eql 'base/foo.bar'
+      get '/foo.bar.xml'
+      last_response.body.should eql 'base/foo.bar'
       get '/foo.bar/first'
       last_response.body.should eql 'first/foo.bar'
       get '/foo.bar/first.json'
+      last_response.body.should eql 'first/foo.bar'
+      get '/foo.bar/first.xml'
       last_response.body.should eql 'first/foo.bar'
     end
 
