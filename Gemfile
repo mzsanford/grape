@@ -10,7 +10,7 @@ group :development, :test do
   gem 'rb-fsevent'
   gem 'growl'
   gem 'json'
-  
-  gem 'rspec' 
+
+  gem 'rspec'
   gem 'rack-test', :require => "rack/test"
 end
