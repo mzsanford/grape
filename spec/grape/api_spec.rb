@@ -266,6 +266,18 @@ describe Grape::API do
 
     end
 
+    it 'should allow for multipart paths where a param contains a period' do
+      subject.route(:get, '/:id/first') do
+        "first"
+      end
+
+      get '/foo/first'
+      last_response.body.should eql 'first'
+
+      get '/foo.bar/first'
+      last_response.body.should eql 'first'
+    end
+
     it 'should allow for :any as a verb' do
       subject.route(:any, '/abc') do
         "lol"
